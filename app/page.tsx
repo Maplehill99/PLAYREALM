@@ -1,7 +1,8 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
+// 1. 引入 Variants 类型以修复构建报错
+import { motion, Variants } from 'framer-motion'; 
 import { Play, Brain, ChevronRight, Menu, CarFront, Sparkles } from 'lucide-react';
 import Link from 'next/link';
 
@@ -35,7 +36,6 @@ const Hero = () => {
   return (
     <div className="relative w-full min-h-screen bg-[#0a0a0f] flex flex-col justify-center items-center overflow-hidden text-center px-4">
       
-      {/* 背景视频 */}
       <div className="absolute inset-0 w-full h-full z-0">
         <video
           autoPlay
@@ -78,7 +78,6 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
           className="flex flex-col md:flex-row gap-4 justify-center items-center mt-8"
         >
-          {/* 修复：移除了 legacyBehavior，直接在 Link 内部使用 div 做动画 */}
           <Link href="/games/vegas-run" className="inline-block">
             <motion.div 
               whileHover={{ scale: 1.05 }}
@@ -118,10 +117,12 @@ const Hero = () => {
 
 // --- 3. Games 游戏板块 ---
 const GamesSection = () => {
-  const cardVariants = {
+  // 2. 这里的 : Variants 是修复 Vercel 报错的关键
+  const cardVariants: Variants = {
     hidden: { opacity: 0, y: 50 },
     visible: (i: number) => ({
-      opacity: 1, y: 0,
+      opacity: 1, 
+      y: 0,
       transition: { delay: i * 0.2, duration: 0.8, ease: "easeOut" },
     }),
   };
