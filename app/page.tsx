@@ -23,9 +23,7 @@ const Navbar = () => (
       <a href="#wellness" className="hover:text-cyan-400 transition-colors scroll-smooth">Wellness</a>
     </div>
 
-    <button className="hidden md:block px-6 py-2 rounded-full border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10 transition-all text-sm font-semibold hover:shadow-[0_0_15px_rgba(34,211,238,0.2)]">
-      Login
-    </button>
+   
 
     <Menu className="md:hidden text-white w-6 h-6" />
   </nav>
@@ -216,7 +214,7 @@ const FeatureSection = () => {
       >
         <span className="text-sm font-semibold text-gray-500 tracking-[0.2em] uppercase">Infrastructure</span>
         <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight">Low Latency. High Concurrency.</h2>
-        <p className="text-lg text-gray-400 leading-relaxed max-w-2xl mx-auto">Our browser-based technology ensures 60FPS performance and real-time connectivity without downloads.</p>
+        <p className="text-lg text-gray-400 leading-relaxed max-w-2xl mx-auto">PlayRealm is an online interactive gaming platform offering browser-based games and immersive digital play experiences. We specialize in the design and development of high-performance gaming engines, providing web-based solutions that make interactive environments accessible directly through the browser. Our browser-based technology ensures 60FPS performance and real-time connectivity without downloads.</p>
       </motion.div>
     </section>
   );
@@ -235,7 +233,7 @@ const Footer = () => {
       </div>
 
       <div className="flex flex-col gap-2">
-        <p className="text-gray-500 text-sm">© 2025 PlayRealm Inc. All Rights Reserved.</p>
+        <p className="text-gray-500 text-sm">© 2025 PlayRealm. All Rights Reserved.</p>
         <div className="flex justify-center gap-4 text-sm text-gray-600">
           <a href="#" className="hover:text-gray-400 transition-colors">Privacy Policy</a>
           <span className="text-gray-700">|</span>
