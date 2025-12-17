@@ -234,11 +234,7 @@ const Footer = () => {
 
       <div className="flex flex-col gap-2">
         <p className="text-gray-500 text-sm">© 2025 PlayRealm. All Rights Reserved.</p>
-        <div className="flex justify-center gap-4 text-sm text-gray-600">
-          <a href="#" className="hover:text-gray-400 transition-colors">Privacy Policy</a>
-          <span className="text-gray-700">|</span>
-          <a href="#" className="hover:text-gray-400 transition-colors">Terms of Service</a>
-        </div>
+        
       </div>
     </footer>
   );
